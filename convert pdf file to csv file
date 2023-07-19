@@ -1,0 +1,10 @@
+import tabula
+import pandas as pd
+
+pdf_path = "path/to/your/file.pdf"
+
+tables = tabula.read_pdf(pdf_path, pages='all', multiple_tables=True)
+df = pd.concat(tables)
+
+csv_path = "path/to/save/file.csv"
+df.to_csv(csv_path, index=False)
