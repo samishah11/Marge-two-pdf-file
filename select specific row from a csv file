@@ -1,0 +1,14 @@
+import pandas as pd
+
+csv_path = "path/to/your/file.csv"
+df = pd.read_csv(csv_path)
+
+# Using loc (label-based selection)
+row_label = 2  # Replace 2 with the desired row label (index) you want to select
+specific_row = df.loc[row_label]
+
+# Using iloc (integer-based selection)
+row_index = 2  # Replace 2 with the desired row index you want to select
+specific_row = df.iloc[row_index]
+
+print(specific_row)
